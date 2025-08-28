@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BILIMONIE STORE</title>
+        <style>
+            body {
+                margin: 0;
+                font-family: 'Segoe UI', Arial, sans-serif;
+                background: #f7f7f7;
+                color: #222;
+            }
+            .menu {
+                background: #222;
+                color: #fff;
+                padding: 20px 0 10px 0;
+                text-align: center;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            }
+            .menu h1 {
+                margin: 0 0 10px 0;
+                font-size: 2.5rem;
+                letter-spacing: 2px;
+            }
+            nav a {
+                color: #fff;
+                text-decoration: none;
+                margin: 0 18px;
+                font-size: 1.1rem;
+                transition: color 0.2s;
+            }
+            nav a:hover {
+                color: #ff9800;
+            }
+            .p1, .p2 {
+                text-align: center;
+                margin: 30px 0 10px 0;
+            }
+            .p1 p {
+                font-size: 1.7rem;
+                font-weight: 600;
+            }
+            .p2 p {
+                font-size: 1.1rem;
+                color: #555;
+            }
+            .featured-products {
+                max-width: 1100px;
+                margin: 40px auto;
+                padding: 0 20px;
+            }
+            .featured-products h2 {
+                text-align: center;
+                font-size: 2rem;
+                margin-bottom: 25px;
+            }
+            .products-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+                gap: 24px;
+            }
+            .product-card {
+                background: #fff;
+                border-radius: 10px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+                padding: 20px;
+                text-align: center;
+                transition: transform 0.2s, box-shadow 0.2s;
+            }
+            .product-card:hover {
+                transform: translateY(-5px) scale(1.03);
+                box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            }
+            .product-card img {
+                width: 100px;
+                height: 100px;
+                object-fit: contain;
+                margin-bottom: 12px;
+            }
+            .product-card h3 {
+                margin: 10px 0 6px 0;
+                font-size: 1.2rem;
+            }
+            .product-card p {
+                color: #666;
+                font-size: 0.98rem;
+                margin-bottom: 10px;
+            }
+            .product-card .price {
+                color: #ff9800;
+                font-weight: bold;
+                font-size: 1.1rem;
+            }
+            .buy-now-btn {
+                background: #ffeb3b;
+                color: #222;
+                border: none;
+                padding: 10px 22px;
+                border-radius: 6px;
+                font-size: 1.05rem;
+                font-weight: 600;
+                cursor: pointer;
+                margin-top: 10px;
+                transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+                box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+            }
+            .buy-now-btn:hover {
+                background: #ffd600;
+                color: #000;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.13);
+            }
+            .cta {
+                background: #ff9800;
+                color: #fff;
+                text-align: center;
+                padding: 30px 10px;
+                margin: 40px 0 0 0;
+                font-size: 1.3rem;
+                border-radius: 8px;
+                max-width: 900px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            footer {
+                background: #222;
+                color: #fff;
+                text-align: center;
+                padding: 18px 0;
+                margin-top: 40px;
+                font-size: 1rem;
+            }
+            #about {
+                background: #fff;
+                max-width: 900px;
+                margin: 50px auto 0 auto;
+                border-radius: 10px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+                padding: 40px 24px 32px 24px;
+            }
+            #about h2 {
+                text-align: center;
+                font-size: 2rem;
+                margin-bottom: 18px;
+                color: #222;
+            }
+            #about p {
+                font-size: 1.1rem;
+                color: #444;
+                text-align: center;
+                max-width: 700px;
+                margin: 0 auto 18px auto;
+            }
+            #about h3 {
+                color: #ff9800;
+                margin-top: 28px;
+            }
+            #about ul {
+                font-size: 1rem;
+                color: #555;
+                max-width: 600px;
+                margin: 0 auto;
+            }
+            @media (max-width: 600px) {
+                .menu h1 {
+                    font-size: 1.5rem;
+                }
+                .featured-products h2 {
+                    font-size: 1.3rem;
+                }
+                .cta {
+                    font-size: 1rem;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="menu">
+            <h1>Bilimonie store</h1>
+            <nav>
+                <a href="#">HOME</a>
+                <a href="#products">PRODUCT</a>
+                <a href="#about">ABOUT</a>
+                <a href="#contact">CONTACT</a>
+            </nav>
+        </div>
+        <div class="p1">
+            <p>Welcome to BILIMONIE STORE</p>
+        </div>
+        <div class="p2">
+            <p>At BILIMONEY STORE, we're passionate about bringing you the best product at unbeatable prices. Exceptional shopping experience with a wide range of high-quality product that cater to your need</p>
+        </div>
+        <section class="featured-products" id="products">
+            <h2>Featured Products</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/100?text=Phone" alt="Smartphone">
+                    <h3>Smartphone</h3>
+                    <p>Latest models with advanced features and sleek design. Enjoy long battery life, fast processors, and stunning displays for all your needs.</p>
+                    <ul style="text-align:left; font-size:0.95rem; color:#444; margin:0 0 10px 0; padding-left:18px;">
+                        <li>6.5" Full HD Display</li>
+                        <li>128GB Storage</li>
+                        <li>Quad Camera System</li>
+                        <li>Face Unlock & Fingerprint Sensor</li>
+                    </ul>
+                    <div class="price">&#8358;350,000</div>
+                    <button class="buy-now-btn">Buy Now</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/100?text=Headphones" alt="Headphones">
+                    <h3>Wireless Headphones</h3>
+                    <p>Experience high-quality sound and comfort on the go. Noise cancellation and up to 30 hours battery life.</p>
+                    <ul style="text-align:left; font-size:0.95rem; color:#444; margin:0 0 10px 0; padding-left:18px;">
+                        <li>Bluetooth 5.2</li>
+                        <li>Active Noise Cancelling</li>
+                        <li>Built-in Microphone</li>
+                        <li>Foldable & Lightweight</li>
+                    </ul>
+                    <div class="price">&#8358;70,000</div>
+                    <button class="buy-now-btn">Buy Now</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/100?text=Laptop" alt="Laptop">
+                    <h3>Laptop</h3>
+                    <p>Powerful laptops for work, study, and entertainment. Sleek design, fast SSD, and long battery life.</p>
+                    <ul style="text-align:left; font-size:0.95rem; color:#444; margin:0 0 10px 0; padding-left:18px;">
+                        <li>15.6" Full HD Display</li>
+                        <li>Intel i5 11th Gen</li>
+                        <li>8GB RAM, 512GB SSD</li>
+                        <li>Backlit Keyboard</li>
+                    </ul>
+                    <div class="price">&#8358;950,000</div>
+                    <button class="buy-now-btn">Buy Now</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/100?text=Watch" alt="Smart Watch">
+                    <h3>Smart Watch</h3>
+                    <p>Track your fitness and stay connected in style. Heart rate monitor, notifications, and water resistance.</p>
+                    <ul style="text-align:left; font-size:0.95rem; color:#444; margin:0 0 10px 0; padding-left:18px;">
+                        <li>1.4" AMOLED Display</li>
+                        <li>Heart Rate & Sleep Tracking</li>
+                        <li>Water Resistant (IP68)</li>
+                        <li>Customizable Watch Faces</li>
+                    </ul>
+                    <div class="price">&#8358;140,000</div>
+                    <button class="buy-now-btn">Buy Now</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/100?text=Tablet" alt="Tablet">
+                    <h3>Tablet</h3>
+                    <p>Perfect for reading, streaming, and productivity. Lightweight and portable with a vivid display.</p>
+                    <ul style="text-align:left; font-size:0.95rem; color:#444; margin:0 0 10px 0; padding-left:18px;">
+                        <li>10.1" HD Display</li>
+                        <li>64GB Storage</li>
+                        <li>Dual Speakers</li>
+                        <li>Expandable Memory</li>
+                    </ul>
+                    <div class="price">&#8358;230,000</div>
+                    <button class="buy-now-btn">Buy Now</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/100?text=Speaker" alt="Bluetooth Speaker">
+                    <h3>Bluetooth Speaker</h3>
+                    <p>Enjoy music anywhere with powerful sound and deep bass. Water-resistant and portable.</p>
+                    <ul style="text-align:left; font-size:0.95rem; color:#444; margin:0 0 10px 0; padding-left:18px;">
+                        <li>10W Output</li>
+                        <li>12 Hours Playtime</li>
+                        <li>Water Resistant (IPX7)</li>
+                        <li>Hands-Free Calling</li>
+                    </ul>
+                    <div class="price">&#8358;40,000</div>
+                    <button class="buy-now-btn">Buy Now</button>
+                </div>
+            </div>
+            <div style="text-align:center; margin-top:30px;">
+                <a href="#" style="background:#ff9800; color:#fff; padding:12px 28px; border-radius:6px; text-decoration:none; font-size:1.1rem; transition:background 0.2s;">View All Products</a>
+            </div>
+        </section>
+        <div class="cta">
+            <strong>Discover more amazing products!</strong><br>
+            Shop now and enjoy exclusive deals and fast delivery.
+        </div>
+        <section id="about" style="background:#fff; max-width:900px; margin:50px auto 0 auto; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.06); padding:40px 24px 32px 24px;">
+            <h2 style="text-align:center; font-size:2rem; margin-bottom:18px; color:#222;">About Us</h2>
+            <p style="font-size:1.1rem; color:#444; text-align:center; max-width:700px; margin:0 auto 18px auto;">
+                Bilimonie Store is dedicated to providing the latest and most reliable electronics and accessories to our valued customers. Since our founding, we have focused on delivering quality products, excellent customer service, and unbeatable value.
+            </p>
+            <h3 style="color:#ff9800; margin-top:28px;">Our Mission</h3>
+            <p style="font-size:1rem; color:#555;">
+                To make technology accessible and affordable for everyone, while ensuring a seamless and enjoyable shopping experience. We are committed to innovation and to helping our customers stay ahead with the latest tech trends.
+            </p>
+            <h3 style="color:#ff9800; margin-top:28px;">Our Story</h3>
+            <p style="font-size:1rem; color:#555;">
+                We started BILIMONIE STORE with a simple idea: to make shopping easier, more convenient, and enjoyable. Our team works tirelessly to curate a selection of products that are not only stylish but also functional. Over the years, we have grown into a trusted destination for tech lovers, students, professionals, and families alike.
+            </p>
+            <h3 style="color:#ff9800; margin-top:28px;">Why Choose Us?</h3>
+            <ul style="font-size:1rem; color:#555; max-width:600px; margin:0 auto 18px auto;">
+                <li>Expert staff ready to help you choose the right product</li>
+                <li>Fast nationwide delivery and easy returns</li>
+                <li>Regular promotions, discounts, and loyalty rewards</li>
+                <li>Secure payment options and privacy protection</li>
+                <li>Thousands of satisfied customers and positive reviews</li>
+            </ul>
+            <h3 style="color:#ff9800; margin-top:28px;">Our Values</h3>
+            <ul style="font-size:1rem; color:#555; max-width:600px; margin:0 auto;">
+                <li>Customer Satisfaction: Your happiness is our top priority. We're committed to providing excellent customer service and ensuring that you're completely satisfied with your purchase.</li>
+                <li>Quality Assurance: We believe in delivering high-quality products that meet your expectations.</li>
+                <li>Community: We're proud to be part of the local community and strive to make a positive impact through our business practices.</li>
+                <li>Integrity & Trust: We operate with honesty and transparency in all our dealings.</li>
+                <li>Innovation: We constantly seek new ways to improve our offerings and services.</li>
+                <li>Fast & Reliable Delivery: Get your products quickly and safely.</li>
+            </ul>
+            <h3 style="color:#ff9800; margin-top:28px;">Meet Our Team</h3>
+            <p style="font-size:1rem; color:#555;">
+                Our passionate team is made up of tech enthusiasts, customer service experts, and logistics professionals. We are always here to support you and answer any questions you may have.
+            </p>
+        </section>
+        <section id="contact" style="background:#fff; max-width:900px; margin:50px auto 0 auto; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.06); padding:40px 24px 32px 24px;">
+            <h2 style="text-align:center; font-size:2rem; margin-bottom:18px; color:#222;">Contact Us</h2>
+            <p style="font-size:1.1rem; color:#444; text-align:center; max-width:700px; margin:0 auto 18px auto;">
+                Have questions or need support? We're here to help! Reach out to us using the form below or through our contact details. You can also connect with us on social media for updates and exclusive offers.
+            </p>
+            <form style="max-width:500px; margin:0 auto; display:flex; flex-direction:column; gap:16px;">
+                <input type="text" placeholder="Your Name" required style="padding:10px; border-radius:5px; border:1px solid #ccc; font-size:1rem;">
+                <input type="email" placeholder="Your Email" required style="padding:10px; border-radius:5px; border:1px solid #ccc; font-size:1rem;">
+                <input type="tel" placeholder="Your Phone Number (optional)" style="padding:10px; border-radius:5px; border:1px solid #ccc; font-size:1rem;">
+                <textarea placeholder="Your Message" rows="5" required style="padding:10px; border-radius:5px; border:1px solid #ccc; font-size:1rem;"></textarea>
+                <button type="submit" style="background:#ff9800; color:#fff; border:none; padding:12px; border-radius:5px; font-size:1.1rem; cursor:pointer;">Send Message</button>
+            </form>
+            <div style="text-align:center; margin-top:24px; color:#555;">
+                <p>Email: <a href="bilahlhunta7@gmail.com" style="color:#ff9800; text-decoration:none;">bilahlhunta7@gmail.com</a></p>
+                <p>Phone: <a href="tel:+2349155580621" style="color:#ff9800; text-decoration:none;">+2349155580621</a></p>
+                <p>WhatsApp: <a href="https://wa.me/2349155580621" style="color:#ff9800; text-decoration:none;">Chat with us</a></p>
+                <p>Address: 3, Ogungbange Close, Baruwa Inside, Ipaja, Lagos, Nigeria</p>
+                <div style="margin-top:18px;">
+                    <a href="https://facebook.com/" style="margin:0 10px; color:#ff9800; text-decoration:none;" target="_blank">Facebook</a> |
+                    <a href="https://instagram.com/" style="margin:0 10px; color:#ff9800; text-decoration:none;" target="_blank">Instagram</a> |
+                    <a href="https://twitter.com/" style="margin:0 10px; color:#ff9800; text-decoration:none;" target="_blank">Twitter</a>
+                </div>
+                <div style="margin-top:18px; color:#888; font-size:0.98rem;">
+                    <strong>Business Hours:</strong><br>
+                    Monday - Friday: 8:00am - 6:00pm<br>
+                    Saturday: 9:00am - 4:00pm<br>
+                    Sunday: Closed
+                </div>
+            </div>
+        </section>
+        <footer>
+            &copy; 2025 Bilimonie Store. All rights reserved.
+        </footer>
+<script>
+    // Buy Now button functionality with modal payment method selection and card/bank form
+    document.addEventListener('DOMContentLoaded', function() {
+        // Create payment modal HTML
+        const modal = document.createElement('div');
+        modal.id = 'paymentMethodModal';
+        modal.style.display = 'none';
+        modal.style.position = 'fixed';
+        modal.style.top = '0';
+        modal.style.left = '0';
+        modal.style.width = '100vw';
+        modal.style.height = '100vh';
+        modal.style.background = 'rgba(0,0,0,0.5)';
+        modal.style.zIndex = '1000';
+        modal.style.alignItems = 'center';
+        modal.style.justifyContent = 'center';
+
+        modal.innerHTML = `
+            <div id="modalContent" style="background:#fff; padding:28px 20px 20px 20px; border-radius:10px; max-width:340px; margin:auto; text-align:center; position:relative; min-height:320px;">
+                <span id="closePaymentModal" style="position:absolute; top:10px; right:16px; cursor:pointer; font-size:1.3rem;">&times;</span>
+                <h3 style="margin-bottom:18px;" id="modalProductName"></h3>
+                <div id="modalProductPrice" style="margin-bottom:18px; color:#ff9800; font-weight:bold;"></div>
+                <div id="paymentOptions">
+                    <p style="margin-bottom:18px;">Choose payment method:</p>
+                    <button id="cardPayBtn" style="background:#ffeb3b; color:#222; border:none; padding:10px 22px; border-radius:6px; font-size:1rem; font-weight:600; cursor:pointer; margin-bottom:10px;">Card Payment</button>
+                    <br>
+                    <button id="transferPayBtn" style="background:#ff9800; color:#fff; border:none; padding:10px 22px; border-radius:6px; font-size:1rem; font-weight:600; cursor:pointer;">Bank Transfer</button>
+                </div>
+                <form id="cardForm" style="display:none; flex-direction:column; gap:12px; margin-top:10px;">
+                    <input type="text" id="cardNumber" placeholder="Card Number" maxlength="19" required style="padding:8px; border-radius:5px; border:1px solid #ccc; font-size:1rem;">
+                    <input type="text" id="expiry" placeholder="Expiry (MM/YY)" maxlength="5" required style="padding:8px; border-radius:5px; border:1px solid #ccc; font-size:1rem;">
+                    <input type="text" id="cvv" placeholder="CVV" maxlength="4" required style="padding:8px; border-radius:5px; border:1px solid #ccc; font-size:1rem;">
+                    <button type="submit" style="background:#ff9800; color:#fff; border:none; padding:10px; border-radius:5px; font-size:1.1rem; cursor:pointer;">Pay Now</button>
+                </form>
+                <form id="bankForm" style="display:none; flex-direction:column; gap:12px; margin-top:10px;">
+                    <div style="background:#fffde7; border-radius:6px; padding:12px 8px; margin-bottom:10px; border:1px solid #ffe082;">
+                        <strong>Bank Transfer Details</strong><br>
+                        <span id="bankAmount"></span><br>
+                        Account Name: Bilimonie Store<br>
+                        Account Number: 9155580621<br>
+                        Bank: opay limited<br>
+                    </div>
+                    <input type="text" id="senderName" placeholder="Your Name" required style="padding:8px; border-radius:5px; border:1px solid #ccc; font-size:1rem;">
+                    <input type="text" id="proof" placeholder="Proof of Payment (e.g. Ref No)" required style="padding:8px; border-radius:5px; border:1px solid #ccc; font-size:1rem;">
+                    <button type="submit" style="background:#ff9800; color:#fff; border:none; padding:10px; border-radius:5px; font-size:1.1rem; cursor:pointer;">Submit</button>
+                </form>
+                <div id="paymentResult" style="margin-top:18px; color:#28a745; font-weight:bold; display:none;"></div>
+            </div>
+        `;
+        document.body.appendChild(modal);
+
+        // Modal event listeners
+        const closeModal = modal.querySelector('#closePaymentModal');
+        closeModal.onclick = function() {
+            modal.style.display = 'none';
+            modal.querySelector('#paymentResult').style.display = 'none';
+            modal.querySelector('#cardForm').style.display = 'none';
+            modal.querySelector('#bankForm').style.display = 'none';
+            modal.querySelector('#paymentOptions').style.display = 'block';
+        };
+
+        // Buy Now button logic
+        document.querySelectorAll('.buy-now-btn').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                const card = btn.closest('.product-card');
+                const name = card.querySelector('h3').textContent;
+                const price = card.querySelector('.price').textContent;
+
+                // Set modal product info
+                modal.querySelector('#modalProductName').textContent = name;
+                modal.querySelector('#modalProductPrice').textContent = price;
+                modal.querySelector('#paymentResult').style.display = 'none';
+                modal.querySelector('#cardForm').style.display = 'none';
+                modal.querySelector('#bankForm').style.display = 'none';
+                modal.querySelector('#paymentOptions').style.display = 'block';
+                modal.style.display = 'flex';
+
+                // Card Payment
+                modal.querySelector('#cardPayBtn').onclick = function() {
+                    modal.querySelector('#paymentOptions').style.display = 'none';
+                    modal.querySelector('#cardForm').style.display = 'flex';
+                    modal.querySelector('#bankForm').style.display = 'none';
+                };
+
+                // Bank Transfer
+                modal.querySelector('#transferPayBtn').onclick = function() {
+                    modal.querySelector('#paymentOptions').style.display = 'none';
+                    modal.querySelector('#cardForm').style.display = 'none';
+                    modal.querySelector('#bankForm').style.display = 'flex';
+                    modal.querySelector('#bankAmount').textContent = "Amount: " + price;
+                };
+
+                // Card Form Submission
+                const cardForm = modal.querySelector('#cardForm');
+                cardForm.onsubmit = function(e) {
+                    e.preventDefault();
+                    // Simple validation (for demo)
+                    const cardNumber = cardForm.querySelector('#cardNumber').value.trim();
+                    const expiry = cardForm.querySelector('#expiry').value.trim();
+                    const cvv = cardForm.querySelector('#cvv').value.trim();
+                    if (cardNumber && expiry && cvv) {
+                        modal.querySelector('#paymentResult').textContent = 'Card payment successful! Thank you for your purchase of ' + name + '.';
+                        modal.querySelector('#paymentResult').style.display = 'block';
+                        setTimeout(() => {
+                            modal.style.display = 'none';
+                            modal.querySelector('#paymentResult').style.display = 'none';
+                            cardForm.reset();
+                            modal.querySelector('#cardForm').style.display = 'none';
+                            modal.querySelector('#paymentOptions').style.display = 'block';
+                        }, 180000);
+                    }
+                };
+
+                // Bank Form Submission
+                const bankForm = modal.querySelector('#bankForm');
+                bankForm.onsubmit = function(e) {
+                    e.preventDefault();
+                    const senderName = bankForm.querySelector('#senderName').value.trim();
+                    const proof = bankForm.querySelector('#proof').value.trim();
+                    if (senderName && proof) {
+                        modal.querySelector('#paymentResult').textContent = 'Bank transfer submitted! We will verify your payment soon. Thank you, ' + senderName + '.';
+                        modal.querySelector('#paymentResult').style.display = 'block';
+                        setTimeout(() => {
+                            modal.style.display = 'none';
+                            modal.querySelector('#paymentResult').style.display = 'none';
+                            bankForm.reset();
+                            modal.querySelector('#bankForm').style.display = 'none';
+                            modal.querySelector('#paymentOptions').style.display = 'block';
+                        }, 220000);
+                    }
+                };
+            });
+        });
+
+        // Close modal when clicking outside the modal content
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+                modal.querySelector('#paymentResult').style.display = 'none';
+                modal.querySelector('#cardForm').style.display = 'none';
+                modal.querySelector('#bankForm').style.display = 'none';
+                modal.querySelector('#paymentOptions').style.display = 'block';
+            }
+        });
+    });
+</script>
+    </body>
+</html>
