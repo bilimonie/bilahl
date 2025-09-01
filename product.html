@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f7f7f7;
+            color: #222;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 16px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 32px;
+            color: #ff9800;
+        }
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 24px;
+        }
+        .product-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .product-card:hover {
+            transform: translateY(-5px) scale(1.03);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+        }
+        .product-card img {
+            width: 110px;
+            height: 110px;
+            object-fit: contain;
+            margin-bottom: 12px;
+        }
+        .product-card h3 {
+            margin: 10px 0 6px 0;
+            font-size: 1.15rem;
+        }
+        .product-card p {
+            color: #666;
+            font-size: 0.97rem;
+            margin-bottom: 10px;
+        }
+        .product-card .price {
+            color: #ff9800;
+            font-weight: bold;
+            font-size: 1.08rem;
+        }
+        .buy-now-btn {
+            background: #ffeb3b;
+            color: #222;
+            border: none;
+            padding: 10px 22px;
+            border-radius: 6px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+        }
+        .buy-now-btn:hover {
+            background: #ffd600;
+            color: #000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.13);
+        }
+        /* Modal styles */
+        #paymentMethodModal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100vw; height: 100vh;
+            background: rgba(0,0,0,0.5);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+        #modalContent {
+            background: #fff;
+            padding: 28px 20px 20px 20px;
+            border-radius: 10px;
+            max-width: 340px;
+            margin: auto;
+            text-align: center;
+            position: relative;
+            min-height: 320px;
+        }
+        @media (max-width: 600px) {
+            .products-grid {
+                grid-template-columns: 1fr;
+                gap: 14px;
+            }
+            .product-card {
+                padding: 12px 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Go Back Button -->
+        <div style="margin-bottom:24px;">
+            <button onclick="window.history.back();" style="background:#ff9800;color:#fff;border:none;padding:10px 22px;border-radius:6px;font-size:1rem;font-weight:600;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,0.07);">
+                &larr; Go Back
+            </button>
+        </div>
+        <h1>All Products</h1>
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="phone.jpg" alt="Smartphone">
+                <h3>Smartphone</h3>
+                <p>Latest models with advanced features and sleek design.</p>
+                <div class="price">&#8358;350,000</div>
+                <button class="buy-now-btn">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="head2.webp" alt="Wireless Headphones">
+                <h3>Wireless Headphones</h3>
+                <p>High-quality sound, noise cancellation, and comfort.</p>
+                <div class="price">&#8358;70,000</div>
+                <button class="buy-now-btn">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="laptop.webp" alt="Laptop">
+                <h3>Laptop</h3>
+                <p>Powerful laptops for work, study, and entertainment.</p>
+                <div class="price">&#8358;950,000</div>
+                <button class="buy-now-btn">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="smartwatch.jpg" alt="Smart Watch">
+                <h3>Smart Watch</h3>
+                <p>Track your fitness and stay connected in style.</p>
+                <div class="price">&#8358;140,000</div>
+                <button class="buy-now-btn">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="tab.webp" alt="Tablet">
+                <h3>Tablet</h3>
+                <p>Perfect for reading, streaming, and productivity.</p>
+                <div class="price">&#8358;230,000</div>
+                <button class="buy-now-btn">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="blue2.jpg" alt="Bluetooth Speaker">
+                <h3>Bluetooth Speaker</h3>
+                <p>Powerful sound and deep bass. Water-resistant and portable.</p>
+                <div class="price">&#8358;40,000</div>
+                <button class="buy-now-btn">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="bank.jpg" alt="Power Bank">
+                <h3>Power Bank</h3>
+                <p>High-capacity, fast charging, and compact design.</p>
+                <div class="price">&#8358;18,000</div>
+                <button class="buy-now-btn">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="ear2.webp" alt="Wireless Earbuds">
+                <h3>Wireless Earbuds</h3>
+                <p>True wireless freedom and crystal-clear sound.</p>
+                <div class="price">&#8358;25,000</div>
+                <button class="buy-now-btn">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="smarttv2.jpg" alt="Smart TV">
+                <h3>Smart TV</h3>
+                <p>Stream, browse, and play in high definition.</p>
+                <div class="price">&#8358;320,000</div>
+                <button class="buy-now-btn">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="game.webp" alt="Game Console">
+                <h3>Game Console</h3>
+                <p>Latest consoles for smooth graphics and immersive gameplay.</p>
+                <div class="price">&#8358;410,000</div>
+                <button class="buy-now-btn">Buy Now</button>
+            </div>
+            <!-- More products below -->
+            <div class="product-card">
+                <img src="printer.jpg" alt="Printer">
+                <h3>All-in-One Printer</h3>
+                <p>Print, scan, and copy with wireless connectivity.</p>
+                <div class="price">&#8358;85,000</div>
+                <button class="buy-now-btn">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="router.webp" alt="WiFi Router">
+                <h3>WiFi Router</h3>
+                <p>Fast, reliable internet for your home or office.</p>
+                <div class="price">&#8358;30,000</div>
+                <button class="buy-now-btn">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="camera.jpg" alt="Digital Camera">
+                <h3>Digital Camera</h3>
+                <p>Capture stunning photos and videos in high resolution.</p>
+                <div class="price">&#8358;210,000</div>
+                <button class="buy-now-btn">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="led.jpg" alt="Monitor">
+                <h3>LED Monitor</h3>
+                <p>Vivid colors and sharp images for work or play.</p>
+                <div class="price">&#8358;75,000</div>
+                <button class="buy-now-btn">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="keyboard.jpg" alt="Keyboard">
+                <h3>Wireless Keyboard</h3>
+                <p>Comfortable typing with long battery life.</p>
+                <div class="price">&#8358;12,000</div>
+                <button class="buy-now-btn">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="mouse.jpg" alt="Mouse">
+                <h3>Wireless Mouse</h3>
+                <p>Precision tracking and ergonomic design.</p>
+                <div class="price">&#8358;8,000</div>
+                <button class="buy-now-btn">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="ssd.webp" alt="SSD Drive">
+                <h3>SSD Drive 512GB</h3>
+                <p>Boost your device speed with fast SSD storage.</p>
+                <div class="price">&#8358;38,000</div>
+                <button class="buy-now-btn">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="flash.webp" alt="Flash Drive">
+                <h3>Flash Drive 64GB</h3>
+                <p>Portable storage for your files and media.</p>
+                <div class="price">&#8358;5,500</div>
+                <button class="buy-now-btn">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="projector.webp" alt="Projector">
+                <h3>Mini Projector</h3>
+                <p>Big screen experience anywhere, anytime.</p>
+                <div class="price">&#8358;65,000</div>
+                <button class="buy-now-btn">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="fan.webp" alt="Rechargeable Fan">
+                <h3>Rechargeable Fan</h3>
+                <p>Stay cool with portable, battery-powered fans.</p>
+                <div class="price">&#8358;18,500</div>
+                <button class="buy-now-btn">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="lamp.webp" alt="LED Lamp">
+                <h3>LED Desk Lamp</h3>
+                <p>Bright, energy-saving light for your workspace.</p>
+                <div class="price">&#8358;7,000</div>
+                <button class="buy-now-btn">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="iron.webp" alt="Electric Iron">
+                <h3>Electric Iron</h3>
+                <p>Efficient and safe ironing for your clothes.</p>
+                <div class="price">&#8358;11,000</div>
+                <button class="buy-now-btn">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="blender.webp" alt="Blender">
+                <h3>Blender</h3>
+                <p>Blend smoothies, soups, and more with ease.</p>
+                <div class="price">&#8358;16,000</div>
+                <button class="buy-now-btn">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="toaster.webp" alt="Toaster">
+                <h3>Toaster</h3>
+                <p>Perfect toast every morning, quick and easy.</p>
+                <div class="price">&#8358;9,500</div>
+                <button class="buy-now-btn">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="refrigirator.webp" alt="Refrigerator">
+                <h3>Refrigerator</h3>
+                <p>Energy-efficient fridge for fresh food storage.</p>
+                <div class="price">&#8358;210,000</div>
+                <button class="buy-now-btn">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="air.webp" alt="Air Conditioner">
+                <h3>Air Conditioner</h3>
+                <p>Stay cool with powerful and silent AC units.</p>
+                <div class="price">&#8358;320,000</div>
+                <button class="buy-now-btn">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="oven.webp" alt="Microwave Oven">
+                <h3>Microwave Oven</h3>
+                <p>Quick and easy heating for your meals.</p>
+                <div class="price">&#8358;55,000</div>
+                <button class="buy-now-btn">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="standing.webp" alt="Standing Fan">
+                <h3>Standing Fan</h3>
+                <p>Adjustable height and strong airflow for any room.</p>
+                <div class="price">&#8358;22,000</div>
+                <button class="buy-now-btn">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="mixer.webp" alt="Mixer">
+                <h3>Electric Mixer</h3>
+                <p>Perfect for baking and mixing ingredients.</p>
+                <div class="price">&#8358;13,000</div>
+                <button class="buy-now-btn">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="water.webp" alt="Water Heater">
+                <h3>Water Heater</h3>
+                <p>Instant hot water for your shower and kitchen.</p>
+                <div class="price">&#8358;28,000</div>
+                <button class="buy-now-btn">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="cleaner.webp" alt="Vacuum Cleaner">
+                <h3>Vacuum Cleaner</h3>
+                <p>Powerful suction for spotless cleaning.</p>
+                <div class="price">&#8358;38,000</div>
+                <button class="buy-now-btn">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="deep.webp" alt="Deep Freezer">
+                <h3>Deep Freezer</h3>
+                <p>Large capacity for all your frozen foods.</p>
+                <div class="price">&#8358;180,000</div>
+                <button class="buy-now-btn">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="stab.webp" alt="Voltage Stabilizer">
+                <h3>Voltage Stabilizer</h3>
+                <p>Protect your appliances from power surges.</p>
+                <div class="price">&#8358;19,000</div>
+                <button class="buy-now-btn">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="gas.webp" alt="Gas Cooker">
+                <h3>Gas Cooker</h3>
+                <p>Efficient and safe cooking for your kitchen.</p>
+                <div class="price">&#8358;35,000</div>
+                <button class="buy-now-btn">Buy Now</button>
+            </div>
+            <!-- Add more products as needed -->
+        </div>
+    </div>
+    <!-- Payment Modal -->
+    <div id="paymentMethodModal">
+        <div id="modalContent">
+            <span id="closePaymentModal" style="position:absolute; top:10px; right:16px; cursor:pointer; font-size:1.3rem;">&times;</span>
+            <h3 style="margin-bottom:18px;" id="modalProductName"></h3>
+            <div id="modalProductPrice" style="margin-bottom:18px; color:#ff9800; font-weight:bold;"></div>
+            <div id="paymentOptions">
+                <p style="margin-bottom:18px;">Choose payment method:</p>
+                <button id="cardPayBtn" style="background:#ffeb3b; color:#222; border:none; padding:10px 22px; border-radius:6px; font-size:1rem; font-weight:600; cursor:pointer; margin-bottom:10px;">Card Payment</button>
+                <br>
+                <button id="transferPayBtn" style="background:#ff9800; color:#fff; border:none; padding:10px 22px; border-radius:6px; font-size:1rem; font-weight:600; cursor:pointer;">Bank Transfer</button>
+            </div>
+            <form id="cardForm" style="display:none; flex-direction:column; gap:12px; margin-top:10px;">
+                <input type="text" id="cardNumber" placeholder="Card Number" maxlength="19" required style="padding:8px; border-radius:5px; border:1px solid #ccc; font-size:1rem;">
+                <input type="text" id="expiry" placeholder="Expiry (MM/YY)" maxlength="5" required style="padding:8px; border-radius:5px; border:1px solid #ccc; font-size:1rem;">
+                <input type="text" id="cvv" placeholder="CVV" maxlength="4" required style="padding:8px; border-radius:5px; border:1px solid #ccc; font-size:1rem;">
+                <button type="submit" style="background:#ff9800; color:#fff; border:none; padding:10px; border-radius:5px; font-size:1.1rem; cursor:pointer;">Pay Now</button>
+            </form>
+            <form id="bankForm" style="display:none; flex-direction:column; gap:12px; margin-top:10px;">
+                <div style="background:#fffde7; border-radius:6px; padding:12px 8px; margin-bottom:10px; border:1px solid #ffe082;">
+                    <strong>Bank Transfer Details</strong><br>
+                    <span id="bankAmount"></span><br>
+                    Account Name: Bilimonie Store<br>
+                    Account Number: 9155580621<br>
+                    Bank: opay limited<br>
+                </div>
+                <input type="text" id="senderName" placeholder="Your Name" required style="padding:8px; border-radius:5px; border:1px solid #ccc; font-size:1rem;">
+                <input type="text" id="proof" placeholder="Proof of Payment (e.g. Ref No)" required style="padding:8px; border-radius:5px; border:1px solid #ccc; font-size:1rem;">
+                <button type="submit" style="background:#ff9800; color:#fff; border:none; padding:10px; border-radius:5px; font-size:1.1rem; cursor:pointer;">Submit</button>
+            </form>
+            <div id="paymentResult" style="margin-top:18px; color:#28a745; font-weight:bold; display:none;"></div>
+        </div>
+    </div>
+    <!-- Back to Top Button -->
+    <button id="backToTop" title="Back to top" style="display:none;position:fixed;bottom:32px;right:24px;z-index:999;background:#ff9800;color:#fff;border:none;padding:12px 16px;border-radius:50%;font-size:1.3rem;box-shadow:0 2px 8px rgba(0,0,0,0.15);cursor:pointer;">&#8679;</button>
+    <script>
+    // Buy Now button functionality with modal payment method selection and card/bank form
+    document.addEventListener('DOMContentLoaded', function() {
+        const modal = document.getElementById('paymentMethodModal');
+        const closeModal = document.getElementById('closePaymentModal');
+        closeModal.onclick = function() {
+            modal.style.display = 'none';
+            modal.querySelector('#paymentResult').style.display = 'none';
+            modal.querySelector('#cardForm').style.display = 'none';
+            modal.querySelector('#bankForm').style.display = 'none';
+            modal.querySelector('#paymentOptions').style.display = 'block';
+        };
+
+        document.querySelectorAll('.buy-now-btn').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                const card = btn.closest('.product-card');
+                const name = card.querySelector('h3').textContent;
+                const price = card.querySelector('.price').textContent;
+
+                // Set modal product info
+                modal.querySelector('#modalProductName').textContent = name;
+                modal.querySelector('#modalProductPrice').textContent = price;
+                modal.querySelector('#paymentResult').style.display = 'none';
+                modal.querySelector('#cardForm').style.display = 'none';
+                modal.querySelector('#bankForm').style.display = 'none';
+                modal.querySelector('#paymentOptions').style.display = 'block';
+                modal.style.display = 'flex';
+
+                // Card Payment
+                modal.querySelector('#cardPayBtn').onclick = function() {
+                    modal.querySelector('#paymentOptions').style.display = 'none';
+                    modal.querySelector('#cardForm').style.display = 'flex';
+                    modal.querySelector('#bankForm').style.display = 'none';
+                };
+
+                // Bank Transfer
+                modal.querySelector('#transferPayBtn').onclick = function() {
+                    modal.querySelector('#paymentOptions').style.display = 'none';
+                    modal.querySelector('#cardForm').style.display = 'none';
+                    modal.querySelector('#bankForm').style.display = 'flex';
+                    modal.querySelector('#bankAmount').textContent = "Amount: " + price;
+                };
+
+                // Card Form Submission
+                const cardForm = modal.querySelector('#cardForm');
+                cardForm.onsubmit = function(e) {
+                    e.preventDefault();
+                    const cardNumber = cardForm.querySelector('#cardNumber').value.trim();
+                    const expiry = cardForm.querySelector('#expiry').value.trim();
+                    const cvv = cardForm.querySelector('#cvv').value.trim();
+                    if (cardNumber && expiry && cvv) {
+                        modal.querySelector('#paymentResult').textContent = 'Card payment successful! Thank you for your purchase of ' + name + '.';
+                        modal.querySelector('#paymentResult').style.display = 'block';
+                        setTimeout(() => {
+                            modal.style.display = 'none';
+                            modal.querySelector('#paymentResult').style.display = 'none';
+                            cardForm.reset();
+                            modal.querySelector('#cardForm').style.display = 'none';
+                            modal.querySelector('#paymentOptions').style.display = 'block';
+                        }, 3000);
+                    }
+                };
+
+                // Bank Form Submission
+                const bankForm = modal.querySelector('#bankForm');
+                bankForm.onsubmit = function(e) {
+                    e.preventDefault();
+                    const senderName = bankForm.querySelector('#senderName').value.trim();
+                    const proof = bankForm.querySelector('#proof').value.trim();
+                    if (senderName && proof) {
+                        modal.querySelector('#paymentResult').textContent = 'Bank transfer submitted! We will verify your payment soon. Thank you, ' + senderName + '.';
+                        modal.querySelector('#paymentResult').style.display = 'block';
+                        setTimeout(() => {
+                            modal.style.display = 'none';
+                            modal.querySelector('#paymentResult').style.display = 'none';
+                            bankForm.reset();
+                            modal.querySelector('#bankForm').style.display = 'none';
+                            modal.querySelector('#paymentOptions').style.display = 'block';
+                        }, 3000);
+                    }
+                };
+            });
+        });
+
+        // Close modal when clicking outside the modal content
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+                modal.querySelector('#paymentResult').style.display = 'none';
+                modal.querySelector('#cardForm').style.display = 'none';
+                modal.querySelector('#bankForm').style.display = 'none';
+                modal.querySelector('#paymentOptions').style.display = 'block';
+            }
+        });
+
+        // Back to Top button logic
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                backToTop.style.display = "block";
+            } else {
+                backToTop.style.display = "none";
+            }
+        });
+        backToTop.onclick = function() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        };
+    });
+    </script>
+</body>
+</html>

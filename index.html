@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=0.001">
         <title>BILIMONIE STORE</title>
         <style>
             body {
@@ -161,15 +161,51 @@
                 max-width: 600px;
                 margin: 0 auto;
             }
+            @media (max-width: 900px) {
+                .featured-products {
+                    max-width: 100%;
+                    padding: 0 8px;
+                }
+                #about, #contact {
+                    max-width: 98vw;
+                    padding: 24px 6px 18px 6px;
+                }
+            }
             @media (max-width: 600px) {
                 .menu h1 {
-                    font-size: 1.5rem;
-                }
-                .featured-products h2 {
                     font-size: 1.3rem;
                 }
-                .cta {
+                nav a {
+                    font-size: 0.98rem;
+                    margin: 0 8px;
+                }
+                .featured-products h2 {
+                    font-size: 1.1rem;
+                }
+                .products-grid {
+                    grid-template-columns: 1fr;
+                    gap: 14px;
+                }
+                .product-card {
+                    padding: 12px 6px;
+                }
+                .product-card h3 {
                     font-size: 1rem;
+                }
+                .product-card p,
+                .product-card ul {
+                    font-size: 0.93rem;
+                }
+                .cta {
+                    font-size: 0.98rem;
+                    padding: 18px 4px;
+                }
+                #about, #contact {
+                    padding: 18px 4px 12px 4px;
+                }
+                footer {
+                    font-size: 0.95rem;
+                    padding: 10px 0;
                 }
             }
         </style>
@@ -180,7 +216,7 @@
             <nav>
                 <a href="#">HOME</a>
                 <a href="#products">PRODUCT</a>
-                <a href="#about">ABOUT</a>
+                <a href="#about">ABOUT US</a>
                 <a href="#contact">CONTACT</a>
             </nav>
         </div>
@@ -188,13 +224,58 @@
             <p>Welcome to BILIMONIE STORE</p>
         </div>
         <div class="p2">
-            <p>At BILIMONEY STORE, we're passionate about bringing you the best product at unbeatable prices. Exceptional shopping experience with a wide range of high-quality product that cater to your need</p>
+            <p>At BILIMONIE STORE, we're passionate about bringing you the best products at unbeatable prices. Enjoy an exceptional shopping experience with a wide range of high-quality products that cater to your needs. <br>
+            <span style="color:#ff9800;font-weight:600;">New arrivals every week • Secure checkout • Friendly support</span>
+            </p>
+        </div>
+        <!-- HOME SECTION: Add a hero banner and highlights below the welcome -->
+        <div class="hero" style="background:linear-gradient(90deg,#ff9800 0,#ffd600 100%);color:#222;padding:40px 10px 30px 10px;text-align:center;">
+            <h2 style="font-size:2.2rem;margin-bottom:10px;">Your Trusted Tech Partner</h2>
+            <p style="font-size:1.15rem;max-width:600px;margin:0 auto 18px auto;">
+                Discover the latest gadgets, unbeatable deals, and fast delivery at Bilimonie Store. Shop with confidence and enjoy top-notch customer support every step of the way!
+            </p>
+            <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:18px;margin:24px 0 0 0;">
+                <div style="background:#fffde7;padding:14px 18px;border-radius:8px;min-width:180px;max-width:260px;margin:0 auto;">
+                    <strong>Open 24/7</strong><br>
+                    Shop anytime, anywhere
+                </div>
+                <div style="background:#e3f2fd;padding:14px 18px;border-radius:8px;min-width:180px;max-width:260px;margin:0 auto;">
+                    <strong>Gift Cards</strong><br>
+                    Perfect for friends & family
+                </div>
+                <div style="background:#e8f5e9;padding:14px 18px;border-radius:8px;min-width:180px;max-width:260px;margin:0 auto;">
+                    <strong>Bulk Orders</strong><br>
+                    Special pricing for businesses & schools
+                </div>
+            </div>
+            <a href="#products" style="background:#222;color:#fff;padding:12px 28px;border-radius:6px;text-decoration:none;font-size:1.1rem;transition:background 0.2s;display:inline-block;margin-top:24px;">Shop Now</a>
+        </div>
+        <div class="highlights" style="display:flex;flex-wrap:wrap;justify-content:center;gap:24px;margin:30px 0 10px 0;">
+            <div style="background:#fff3e0;padding:18px 24px;border-radius:8px;min-width:220px;flex:1 1 220px;max-width:320px;">
+                <strong>Free Delivery</strong><br>
+                On all orders above &#8358;50,000
+            </div>
+            <div style="background:#e3f2fd;padding:18px 24px;border-radius:8px;min-width:220px;flex:1 1 220px;max-width:320px;">
+                <strong>Warranty</strong><br>
+                1-year warranty on electronics
+            </div>
+            <div style="background:#e8f5e9;padding:18px 24px;border-radius:8px;min-width:220px;flex:1 1 220px;max-width:320px;">
+                <strong>7-Day Returns</strong><br>
+                Hassle-free returns & exchanges
+            </div>
+        </div>
+        <div style="background:#fffde7;padding:18px 10px 10px 10px;border-radius:8px;max-width:900px;margin:30px auto 18px auto;text-align:center;">
+            <h3 style="color:#ff9800;margin-bottom:8px;">🔥 Hot Deals This Week</h3>
+            <span style="color:#222;font-size:1.08rem;">Save up to 20% on select smartphones, laptops, and accessories. Limited time only! <a href="#products" style="color:#ff9800;text-decoration:underline;">See deals</a></span>
         </div>
         <section class="featured-products" id="products">
             <h2>Featured Products</h2>
+            <p style="text-align:center;color:#555;font-size:1.08rem;margin-bottom:18px;">
+                Explore our bestsellers and new arrivals. All products are original, come with warranty, and are eligible for fast delivery nationwide.
+            </p>
             <div class="products-grid">
                 <div class="product-card">
-                    <img src="https://via.placeholder.com/100?text=Phone" alt="Smartphone">
+                    <img src="phone.jpg" alt="Smartphone">
                     <h3>Smartphone</h3>
                     <p>Latest models with advanced features and sleek design. Enjoy long battery life, fast processors, and stunning displays for all your needs.</p>
                     <ul style="text-align:left; font-size:0.95rem; color:#444; margin:0 0 10px 0; padding-left:18px;">
@@ -207,7 +288,7 @@
                     <button class="buy-now-btn">Buy Now</button>
                 </div>
                 <div class="product-card">
-                    <img src="https://via.placeholder.com/100?text=Headphones" alt="Headphones">
+                    <img src="head2.webp" alt="Wireless Headphones">
                     <h3>Wireless Headphones</h3>
                     <p>Experience high-quality sound and comfort on the go. Noise cancellation and up to 30 hours battery life.</p>
                     <ul style="text-align:left; font-size:0.95rem; color:#444; margin:0 0 10px 0; padding-left:18px;">
@@ -220,7 +301,7 @@
                     <button class="buy-now-btn">Buy Now</button>
                 </div>
                 <div class="product-card">
-                    <img src="https://via.placeholder.com/100?text=Laptop" alt="Laptop">
+                    <img src="laptop.webp"alt="laptop">
                     <h3>Laptop</h3>
                     <p>Powerful laptops for work, study, and entertainment. Sleek design, fast SSD, and long battery life.</p>
                     <ul style="text-align:left; font-size:0.95rem; color:#444; margin:0 0 10px 0; padding-left:18px;">
@@ -233,7 +314,7 @@
                     <button class="buy-now-btn">Buy Now</button>
                 </div>
                 <div class="product-card">
-                    <img src="https://via.placeholder.com/100?text=Watch" alt="Smart Watch">
+                    <img src="smartwatch.jpg" alt="Smart Watch">
                     <h3>Smart Watch</h3>
                     <p>Track your fitness and stay connected in style. Heart rate monitor, notifications, and water resistance.</p>
                     <ul style="text-align:left; font-size:0.95rem; color:#444; margin:0 0 10px 0; padding-left:18px;">
@@ -246,7 +327,7 @@
                     <button class="buy-now-btn">Buy Now</button>
                 </div>
                 <div class="product-card">
-                    <img src="https://via.placeholder.com/100?text=Tablet" alt="Tablet">
+                    <img src="tab.webp" alt="Tablet">
                     <h3>Tablet</h3>
                     <p>Perfect for reading, streaming, and productivity. Lightweight and portable with a vivid display.</p>
                     <ul style="text-align:left; font-size:0.95rem; color:#444; margin:0 0 10px 0; padding-left:18px;">
@@ -259,7 +340,7 @@
                     <button class="buy-now-btn">Buy Now</button>
                 </div>
                 <div class="product-card">
-                    <img src="https://via.placeholder.com/100?text=Speaker" alt="Bluetooth Speaker">
+                    <img src="blue2.jpg" alt="Bluetooth Speaker">
                     <h3>Bluetooth Speaker</h3>
                     <p>Enjoy music anywhere with powerful sound and deep bass. Water-resistant and portable.</p>
                     <ul style="text-align:left; font-size:0.95rem; color:#444; margin:0 0 10px 0; padding-left:18px;">
@@ -271,27 +352,110 @@
                     <div class="price">&#8358;40,000</div>
                     <button class="buy-now-btn">Buy Now</button>
                 </div>
+                <div class="product-card">
+                    <img src="bank.jpg" alt="Power Bank">
+                    <h3>Power Bank</h3>
+                    <p>Stay powered up on the go with our high-capacity power banks. Fast charging and compact design for convenience.</p>
+                    <ul style="text-align:left; font-size:0.95rem; color:#444; margin:0 0 10px 0; padding-left:18px;">
+                        <li>20,000mAh Capacity</li>
+                        <li>Dual USB Output</li>
+                        <li>Fast Charging Support</li>
+                        <li>LED Battery Indicator</li>
+                    </ul>
+                    <div class="price">&#8358;18,000</div>
+                    <button class="buy-now-btn">Buy Now</button>
+                </div>
+                <div class="product-card">
+                    <img src="ear2.webp" alt="Wireless Earbuds">
+                    <h3>Wireless Earbuds</h3>
+                    <p>Enjoy true wireless freedom and crystal-clear sound. Perfect for music, calls, and workouts.</p>
+                    <ul style="text-align:left; font-size:0.95rem; color:#444; margin:0 0 10px 0; padding-left:18px;">
+                        <li>Bluetooth 5.0</li>
+                        <li>Touch Controls</li>
+                        <li>Charging Case Included</li>
+                        <li>Up to 20 Hours Playtime</li>
+                    </ul>
+                    <div class="price">&#8358;25,000</div>
+                    <button class="buy-now-btn">Buy Now</button>
+                </div>
+                <div class="product-card">
+                    <img src="smarttv2.jpg" alt="Smart TV">
+                    <h3>Smart TV</h3>
+                    <p>Experience entertainment like never before with our range of smart TVs. Stream, browse, and play in high definition.</p>
+                    <ul style="text-align:left; font-size:0.95rem; color:#444; margin:0 0 10px 0; padding-left:18px;">
+                        <li>43" 4K UHD Display</li>
+                        <li>Built-in WiFi & Apps</li>
+                        <li>HDMI & USB Ports</li>
+                        <li>Voice Control Support</li>
+                    </ul>
+                    <div class="price">&#8358;320,000</div>
+                    <button class="buy-now-btn">Buy Now</button>
+                </div>
+                <div class="product-card">
+                    <img src="game.webp" alt="Game Console">
+                    <h3>Game Console</h3>
+                    <p>Level up your gaming with the latest consoles. Smooth graphics, immersive gameplay, and multiplayer fun.</p>
+                    <ul style="text-align:left; font-size:0.95rem; color:#444; margin:0 0 10px 0; padding-left:18px;">
+                        <li>4K Gaming Support</li>
+                        <li>Wireless Controllers</li>
+                        <li>500GB Storage</li>
+                        <li>Exclusive Game Titles</li>
+                    </ul>
+                    <div class="price">&#8358;410,000</div>
+                    <button class="buy-now-btn">Buy Now</button>
+                </div>
             </div>
             <div style="text-align:center; margin-top:30px;">
-                <a href="#" style="background:#ff9800; color:#fff; padding:12px 28px; border-radius:6px; text-decoration:none; font-size:1.1rem; transition:background 0.2s;">View All Products</a>
+                <a href="product.html" style="background:#ff9800; color:#fff; padding:12px 28px; border-radius:6px; text-decoration:none; font-size:1.1rem; transition:background 0.2s;">View All Products</a>
+            </div>
+            <div style="margin-top:32px;text-align:center;">
+                <h3 style="color:#ff9800;">Need Help Choosing?</h3>
+                <p style="color:#444;max-width:600px;margin:0 auto;">
+                    Not sure which product is right for you? <a href="#contact" style="color:#ff9800;text-decoration:underline;">Contact our experts</a> for personalized recommendations or chat with us live!
+                </p>
             </div>
         </section>
         <div class="cta">
             <strong>Discover more amazing products!</strong><br>
-            Shop now and enjoy exclusive deals and fast delivery.
+            Shop now and enjoy exclusive deals and fast delivery.<br>
+            <span style="font-size:1rem;">Sign up for our newsletter and get &#8358;2,000 off your first order.</span>
         </div>
+        <!-- NEWSLETTER SIGNUP -->
+        <div style="background:#fff3e0;max-width:500px;margin:32px auto 0 auto;padding:24px 18px 18px 18px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.06);text-align:center;">
+            <h3 style="color:#ff9800;margin-bottom:10px;">Subscribe to Our Newsletter</h3>
+            <form id="newsletterForm" style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;">
+                <input type="email" id="newsletterEmail" placeholder="Enter your email" required style="flex:1 1 180px;min-width:140px;padding:10px;border-radius:5px;border:1px solid #ccc;font-size:1rem;">
+                <button type="submit" style="background:#ff9800;color:#fff;border:none;padding:10px 20px;border-radius:5px;font-size:1rem;cursor:pointer;">Subscribe</button>
+            </form>
+            <div id="newsletterMsg" style="margin-top:10px;color:#28a745;font-weight:600;display:none;">Thank you for subscribing!</div>
+        </div>
+        <!-- ABOUT SECTION: Add a timeline and customer testimonials -->
         <section id="about" style="background:#fff; max-width:900px; margin:50px auto 0 auto; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.06); padding:40px 24px 32px 24px;">
             <h2 style="text-align:center; font-size:2rem; margin-bottom:18px; color:#222;">About Us</h2>
             <p style="font-size:1.1rem; color:#444; text-align:center; max-width:700px; margin:0 auto 18px auto;">
                 Bilimonie Store is dedicated to providing the latest and most reliable electronics and accessories to our valued customers. Since our founding, we have focused on delivering quality products, excellent customer service, and unbeatable value.
             </p>
+            <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:18px;margin-bottom:18px;">
+                <div style="flex:1 1 220px;min-width:220px;max-width:300px;background:#f7f7f7;border-radius:8px;padding:18px;">
+                    <strong>2019</strong><br>
+                    Store founded in Lagos, Nigeria
+                </div>
+                <div style="flex:1 1 220px;min-width:220px;max-width:300px;background:#f7f7f7;border-radius:8px;padding:18px;">
+                    <strong>2021</strong><br>
+                    Expanded to nationwide delivery
+                </div>
+                <div style="flex:1 1 220px;min-width:220px;max-width:300px;background:#f7f7f7;border-radius:8px;padding:18px;">
+                    <strong>2024</strong><br>
+                    Over 10,000 happy customers
+                </div>
+            </div>
             <h3 style="color:#ff9800; margin-top:28px;">Our Mission</h3>
             <p style="font-size:1rem; color:#555;">
                 To make technology accessible and affordable for everyone, while ensuring a seamless and enjoyable shopping experience. We are committed to innovation and to helping our customers stay ahead with the latest tech trends.
             </p>
             <h3 style="color:#ff9800; margin-top:28px;">Our Story</h3>
             <p style="font-size:1rem; color:#555;">
-                We started BILIMONIE STORE with a simple idea: to make shopping easier, more convenient, and enjoyable. Our team works tirelessly to curate a selection of products that are not only stylish but also functional. Over the years, we have grown into a trusted destination for tech lovers, students, professionals, and families alike.
+                What started as a small shop in Lagos has grown into a nationwide brand trusted by thousands. We believe in honest business, community support, and always putting the customer first. Our journey continues as we expand our product range and services to serve you better.
             </p>
             <h3 style="color:#ff9800; margin-top:28px;">Why Choose Us?</h3>
             <ul style="font-size:1rem; color:#555; max-width:600px; margin:0 auto 18px auto;">
@@ -300,21 +464,36 @@
                 <li>Regular promotions, discounts, and loyalty rewards</li>
                 <li>Secure payment options and privacy protection</li>
                 <li>Thousands of satisfied customers and positive reviews</li>
+                <li>Warranty on all electronics</li>
+                <li>7-day return policy</li>
+                <li>Community outreach and tech workshops</li>
             </ul>
-            <h3 style="color:#ff9800; margin-top:28px;">Our Values</h3>
-            <ul style="font-size:1rem; color:#555; max-width:600px; margin:0 auto;">
-                <li>Customer Satisfaction: Your happiness is our top priority. We're committed to providing excellent customer service and ensuring that you're completely satisfied with your purchase.</li>
-                <li>Quality Assurance: We believe in delivering high-quality products that meet your expectations.</li>
-                <li>Community: We're proud to be part of the local community and strive to make a positive impact through our business practices.</li>
-                <li>Integrity & Trust: We operate with honesty and transparency in all our dealings.</li>
-                <li>Innovation: We constantly seek new ways to improve our offerings and services.</li>
-                <li>Fast & Reliable Delivery: Get your products quickly and safely.</li>
-            </ul>
+            <h3 style="color:#ff9800; margin-top:28px;">What Our Customers Say</h3>
+            <div style="display:flex;flex-wrap:wrap;gap:18px;justify-content:center;">
+                <div style="background:#e8f5e9;padding:14px 18px;border-radius:8px;max-width:260px;min-width:180px;">
+                    <em>"Great service and fast delivery! My laptop arrived in perfect condition."</em><br>
+                    <span style="color:#222;font-size:0.98rem;">- Chinedu, Abuja</span>
+                </div>
+                <div style="background:#fff3e0;padding:14px 18px;border-radius:8px;max-width:260px;min-width:180px;">
+                    <em>"Customer support was very helpful. I love my new phone!"</em><br>
+                    <span style="color:#222;font-size:0.98rem;">- Aisha, Lagos</span>
+                </div>
+                <div style="background:#e3f2fd;padding:14px 18px;border-radius:8px;max-width:260px;min-width:180px;">
+                    <em>"Easy returns and genuine products. Highly recommend Bilimonie Store."</em><br>
+                    <span style="color:#222;font-size:0.98rem;">- Tunde, Ibadan</span>
+                </div>
+                <div style="background:#fffde7;padding:14px 18px;border-radius:8px;max-width:260px;min-width:180px;">
+                    <em>"I got a bulk discount for my company. Delivery was prompt and products were authentic."</em><br>
+                    <span style="color:#222;font-size:0.98rem;">- Mrs. Okafor, Enugu</span>
+                </div>
+            </div>
             <h3 style="color:#ff9800; margin-top:28px;">Meet Our Team</h3>
             <p style="font-size:1rem; color:#555;">
-                Our passionate team is made up of tech enthusiasts, customer service experts, and logistics professionals. We are always here to support you and answer any questions you may have.
+                Our passionate team is made up of tech enthusiasts, customer service experts, and logistics professionals. We are always here to support you and answer any questions you may have.<br>
+                <span style="color:#ff9800;">Want to join us? <a href="mailto:bilahlhunta7@gmail.com" style="color:#ff9800;text-decoration:underline;">Send your CV</a></span>
             </p>
         </section>
+        <!-- CONTACT SECTION: Add a FAQ and map link -->
         <section id="contact" style="background:#fff; max-width:900px; margin:50px auto 0 auto; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.06); padding:40px 24px 32px 24px;">
             <h2 style="text-align:center; font-size:2rem; margin-bottom:18px; color:#222;">Contact Us</h2>
             <p style="font-size:1.1rem; color:#444; text-align:center; max-width:700px; margin:0 auto 18px auto;">
@@ -328,7 +507,7 @@
                 <button type="submit" style="background:#ff9800; color:#fff; border:none; padding:12px; border-radius:5px; font-size:1.1rem; cursor:pointer;">Send Message</button>
             </form>
             <div style="text-align:center; margin-top:24px; color:#555;">
-                <p>Email: <a href="bilahlhunta7@gmail.com" style="color:#ff9800; text-decoration:none;">bilahlhunta7@gmail.com</a></p>
+                <p>Email: <a href="mailto:bilahlhunta7@gmail.com" style="color:#ff9800; text-decoration:none;">bilahlhunta7@gmail.com</a></p>
                 <p>Phone: <a href="tel:+2349155580621" style="color:#ff9800; text-decoration:none;">+2349155580621</a></p>
                 <p>WhatsApp: <a href="https://wa.me/2349155580621" style="color:#ff9800; text-decoration:none;">Chat with us</a></p>
                 <p>Address: 3, Ogungbange Close, Baruwa Inside, Ipaja, Lagos, Nigeria</p>
@@ -343,154 +522,203 @@
                     Saturday: 9:00am - 4:00pm<br>
                     Sunday: Closed
                 </div>
+                <div style="margin-top:18px;">
+                    <a href="https://goo.gl/maps/8QwQ7k8k8k8k8k8k7" target="_blank" style="color:#ff9800;text-decoration:underline;">View on Google Maps</a>
+                </div>
+            </div>
+            <div style="margin-top:32px;max-width:700px;margin-left:auto;margin-right:auto;">
+                <h3 style="color:#ff9800;">Frequently Asked Questions</h3>
+                <ul style="color:#444;font-size:1rem;line-height:1.7;">
+                    <li><strong>How long does delivery take?</strong> <br>Most orders are delivered within 1-3 business days in Lagos and 3-7 days nationwide.</li>
+                    <li><strong>Can I return a product?</strong> <br>Yes, we offer a 7-day return policy for eligible products. Contact us for easy returns.</li>
+                    <li><strong>Is payment on delivery available?</strong> <br>Currently, we accept card payments and bank transfers before delivery.</li>
+                    <li><strong>How do I track my order?</strong> <br>After purchase, you will receive a tracking link via email or WhatsApp.</li>
+                    <li><strong>Do you offer bulk or corporate sales?</strong> <br>Yes! Contact us for special pricing on bulk orders for schools, offices, and events.</li>
+                    <li><strong>How can I get updates on new products?</strong> <br>Subscribe to our newsletter or follow us on social media for the latest updates and offers.</li>
+                </ul>
+            </div>
+            <div style="margin-top:32px;text-align:center;">
+                <h3 style="color:#ff9800;">Visit Our Store</h3>
+                <iframe src="https://maps.google.com/maps?q=3%20Ogungbange%20Close%20Baruwa%20Inside%20Ipaja%20Lagos&t=&z=15&ie=UTF8&iwloc=&output=embed" width="90%" height="220" style="border:0;border-radius:8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
         <footer>
             &copy; 2025 Bilimonie Store. All rights reserved.
+            <br>
+            <a href="#" style="color:#ff9800;text-decoration:underline;font-size:0.95rem;margin:0 8px;">Privacy Policy</a> |
+            <a href="#" style="color:#ff9800;text-decoration:underline;font-size:0.95rem;margin:0 8px;">Terms & Conditions</a>
         </footer>
+        <!-- BACK TO TOP BUTTON -->
+        <button id="backToTop" title="Back to top" style="display:none;position:fixed;bottom:32px;right:24px;z-index:999;background:#ff9800;color:#fff;border:none;padding:12px 16px;border-radius:50%;font-size:1.3rem;box-shadow:0 2px 8px rgba(0,0,0,0.15);cursor:pointer;">&#8679;</button>
 <script>
-    // Buy Now button functionality with modal payment method selection and card/bank form
+    // Newsletter form logic
     document.addEventListener('DOMContentLoaded', function() {
-        // Create payment modal HTML
-        const modal = document.createElement('div');
-        modal.id = 'paymentMethodModal';
-        modal.style.display = 'none';
-        modal.style.position = 'fixed';
-        modal.style.top = '0';
-        modal.style.left = '0';
-        modal.style.width = '100vw';
-        modal.style.height = '100vh';
-        modal.style.background = 'rgba(0,0,0,0.5)';
-        modal.style.zIndex = '1000';
-        modal.style.alignItems = 'center';
-        modal.style.justifyContent = 'center';
+        // Newsletter
+        const newsletterForm = document.getElementById('newsletterForm');
+        if(newsletterForm){
+            newsletterForm.onsubmit = function(e){
+                e.preventDefault();
+                document.getElementById('newsletterMsg').style.display = 'block';
+                newsletterForm.reset();
+                setTimeout(()=>{document.getElementById('newsletterMsg').style.display='none';}, 4000);
+            };
+        }
 
-        modal.innerHTML = `
-            <div id="modalContent" style="background:#fff; padding:28px 20px 20px 20px; border-radius:10px; max-width:340px; margin:auto; text-align:center; position:relative; min-height:320px;">
-                <span id="closePaymentModal" style="position:absolute; top:10px; right:16px; cursor:pointer; font-size:1.3rem;">&times;</span>
-                <h3 style="margin-bottom:18px;" id="modalProductName"></h3>
-                <div id="modalProductPrice" style="margin-bottom:18px; color:#ff9800; font-weight:bold;"></div>
-                <div id="paymentOptions">
-                    <p style="margin-bottom:18px;">Choose payment method:</p>
-                    <button id="cardPayBtn" style="background:#ffeb3b; color:#222; border:none; padding:10px 22px; border-radius:6px; font-size:1rem; font-weight:600; cursor:pointer; margin-bottom:10px;">Card Payment</button>
-                    <br>
-                    <button id="transferPayBtn" style="background:#ff9800; color:#fff; border:none; padding:10px 22px; border-radius:6px; font-size:1rem; font-weight:600; cursor:pointer;">Bank Transfer</button>
-                </div>
-                <form id="cardForm" style="display:none; flex-direction:column; gap:12px; margin-top:10px;">
-                    <input type="text" id="cardNumber" placeholder="Card Number" maxlength="19" required style="padding:8px; border-radius:5px; border:1px solid #ccc; font-size:1rem;">
-                    <input type="text" id="expiry" placeholder="Expiry (MM/YY)" maxlength="5" required style="padding:8px; border-radius:5px; border:1px solid #ccc; font-size:1rem;">
-                    <input type="text" id="cvv" placeholder="CVV" maxlength="4" required style="padding:8px; border-radius:5px; border:1px solid #ccc; font-size:1rem;">
-                    <button type="submit" style="background:#ff9800; color:#fff; border:none; padding:10px; border-radius:5px; font-size:1.1rem; cursor:pointer;">Pay Now</button>
-                </form>
-                <form id="bankForm" style="display:none; flex-direction:column; gap:12px; margin-top:10px;">
-                    <div style="background:#fffde7; border-radius:6px; padding:12px 8px; margin-bottom:10px; border:1px solid #ffe082;">
-                        <strong>Bank Transfer Details</strong><br>
-                        <span id="bankAmount"></span><br>
-                        Account Name: Bilimonie Store<br>
-                        Account Number: 9155580621<br>
-                        Bank: opay limited<br>
-                    </div>
-                    <input type="text" id="senderName" placeholder="Your Name" required style="padding:8px; border-radius:5px; border:1px solid #ccc; font-size:1rem;">
-                    <input type="text" id="proof" placeholder="Proof of Payment (e.g. Ref No)" required style="padding:8px; border-radius:5px; border:1px solid #ccc; font-size:1rem;">
-                    <button type="submit" style="background:#ff9800; color:#fff; border:none; padding:10px; border-radius:5px; font-size:1.1rem; cursor:pointer;">Submit</button>
-                </form>
-                <div id="paymentResult" style="margin-top:18px; color:#28a745; font-weight:bold; display:none;"></div>
-            </div>
-        `;
-        document.body.appendChild(modal);
-
-        // Modal event listeners
-        const closeModal = modal.querySelector('#closePaymentModal');
-        closeModal.onclick = function() {
-            modal.style.display = 'none';
-            modal.querySelector('#paymentResult').style.display = 'none';
-            modal.querySelector('#cardForm').style.display = 'none';
-            modal.querySelector('#bankForm').style.display = 'none';
-            modal.querySelector('#paymentOptions').style.display = 'block';
+        // Back to top button
+        const backToTop = document.getElementById('backToTop');
+        window.onscroll = function() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                backToTop.style.display = "block";
+            } else {
+                backToTop.style.display = "none";
+            }
+        };
+        backToTop.onclick = function() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
         };
 
-        // Buy Now button logic
-        document.querySelectorAll('.buy-now-btn').forEach(function(btn) {
-            btn.addEventListener('click', function() {
-                const card = btn.closest('.product-card');
-                const name = card.querySelector('h3').textContent;
-                const price = card.querySelector('.price').textContent;
+        // Buy Now button functionality with modal payment method selection and card/bank form
+        document.addEventListener('DOMContentLoaded', function() {
+            // Create payment modal HTML
+            const modal = document.createElement('div');
+            modal.id = 'paymentMethodModal';
+            modal.style.display = 'none';
+            modal.style.position = 'fixed';
+            modal.style.top = '0';
+            modal.style.left = '0';
+            modal.style.width = '100vw';
+            modal.style.height = '100vh';
+            modal.style.background = 'rgba(0,0,0,0.5)';
+            modal.style.zIndex = '1000';
+            modal.style.alignItems = 'center';
+            modal.style.justifyContent = 'center';
+            modal.innerHTML = `
+                <div id="modalContent" style="background:#fff; padding:28px 20px 20px 20px; border-radius:10px; max-width:340px; margin:auto; text-align:center; position:relative; min-height:320px;">
+                    <span id="closePaymentModal" style="position:absolute; top:10px; right:16px; cursor:pointer; font-size:1.3rem;">&times;</span>
+                    <h3 style="margin-bottom:18px;" id="modalProductName"></h3>
+                    <div id="modalProductPrice" style="margin-bottom:18px; color:#ff9800; font-weight:bold;"></div>
+                    <div id="paymentOptions">
+                        <p style="margin-bottom:18px;">Choose payment method:</p>
+                        <button id="cardPayBtn" style="background:#ffeb3b; color:#222; border:none; padding:10px 22px; border-radius:6px; font-size:1rem; font-weight:600; cursor:pointer; margin-bottom:10px;">Card Payment</button>
+                        <br>
+                        <button id="transferPayBtn" style="background:#ff9800; color:#fff; border:none; padding:10px 22px; border-radius:6px; font-size:1rem; font-weight:600; cursor:pointer;">Bank Transfer</button>
+                    </div>
+                    <form id="cardForm" style="display:none; flex-direction:column; gap:12px; margin-top:10px;">
+                        <input type="text" id="cardNumber" placeholder="Card Number" maxlength="19" required style="padding:8px; border-radius:5px; border:1px solid #ccc; font-size:1rem;">
+                        <input type="text" id="expiry" placeholder="Expiry (MM/YY)" maxlength="5" required style="padding:8px; border-radius:5px; border:1px solid #ccc; font-size:1rem;">
+                        <input type="text" id="cvv" placeholder="CVV" maxlength="4" required style="padding:8px; border-radius:5px; border:1px solid #ccc; font-size:1rem;">
+                        <button type="submit" style="background:#ff9800; color:#fff; border:none; padding:10px; border-radius:5px; font-size:1.1rem; cursor:pointer;">Pay Now</button>
+                    </form>
+                    <form id="bankForm" style="display:none; flex-direction:column; gap:12px; margin-top:10px;">
+                        <div style="background:#fffde7; border-radius:6px; padding:12px 8px; margin-bottom:10px; border:1px solid #ffe082;">
+                            <strong>Bank Transfer Details</strong><br>
+                            <span id="bankAmount"></span><br>
+                            Account Name: Bilimonie Store<br>
+                            Account Number: 9155580621<br>
+                            Bank: opay limited<br>
+                        </div>
+                        <input type="text" id="senderName" placeholder="Your Name" required style="padding:8px; border-radius:5px; border:1px solid #ccc; font-size:1rem;">
+                        <input type="text" id="proof" placeholder="Proof of Payment (e.g. Ref No)" required style="padding:8px; border-radius:5px; border:1px solid #ccc; font-size:1rem;">
+                        <button type="submit" style="background:#ff9800; color:#fff; border:none; padding:10px; border-radius:5px; font-size:1.1rem; cursor:pointer;">Submit</button>
+                    </form>
+                    <div id="paymentResult" style="margin-top:18px; color:#28a745; font-weight:bold; display:none;"></div>
+                </div>
+            `;
+            document.body.appendChild(modal);
 
-                // Set modal product info
-                modal.querySelector('#modalProductName').textContent = name;
-                modal.querySelector('#modalProductPrice').textContent = price;
-                modal.querySelector('#paymentResult').style.display = 'none';
-                modal.querySelector('#cardForm').style.display = 'none';
-                modal.querySelector('#bankForm').style.display = 'none';
-                modal.querySelector('#paymentOptions').style.display = 'block';
-                modal.style.display = 'flex';
-
-                // Card Payment
-                modal.querySelector('#cardPayBtn').onclick = function() {
-                    modal.querySelector('#paymentOptions').style.display = 'none';
-                    modal.querySelector('#cardForm').style.display = 'flex';
-                    modal.querySelector('#bankForm').style.display = 'none';
-                };
-
-                // Bank Transfer
-                modal.querySelector('#transferPayBtn').onclick = function() {
-                    modal.querySelector('#paymentOptions').style.display = 'none';
-                    modal.querySelector('#cardForm').style.display = 'none';
-                    modal.querySelector('#bankForm').style.display = 'flex';
-                    modal.querySelector('#bankAmount').textContent = "Amount: " + price;
-                };
-
-                // Card Form Submission
-                const cardForm = modal.querySelector('#cardForm');
-                cardForm.onsubmit = function(e) {
-                    e.preventDefault();
-                    // Simple validation (for demo)
-                    const cardNumber = cardForm.querySelector('#cardNumber').value.trim();
-                    const expiry = cardForm.querySelector('#expiry').value.trim();
-                    const cvv = cardForm.querySelector('#cvv').value.trim();
-                    if (cardNumber && expiry && cvv) {
-                        modal.querySelector('#paymentResult').textContent = 'Card payment successful! Thank you for your purchase of ' + name + '.';
-                        modal.querySelector('#paymentResult').style.display = 'block';
-                        setTimeout(() => {
-                            modal.style.display = 'none';
-                            modal.querySelector('#paymentResult').style.display = 'none';
-                            cardForm.reset();
-                            modal.querySelector('#cardForm').style.display = 'none';
-                            modal.querySelector('#paymentOptions').style.display = 'block';
-                        }, 180000);
-                    }
-                };
-
-                // Bank Form Submission
-                const bankForm = modal.querySelector('#bankForm');
-                bankForm.onsubmit = function(e) {
-                    e.preventDefault();
-                    const senderName = bankForm.querySelector('#senderName').value.trim();
-                    const proof = bankForm.querySelector('#proof').value.trim();
-                    if (senderName && proof) {
-                        modal.querySelector('#paymentResult').textContent = 'Bank transfer submitted! We will verify your payment soon. Thank you, ' + senderName + '.';
-                        modal.querySelector('#paymentResult').style.display = 'block';
-                        setTimeout(() => {
-                            modal.style.display = 'none';
-                            modal.querySelector('#paymentResult').style.display = 'none';
-                            bankForm.reset();
-                            modal.querySelector('#bankForm').style.display = 'none';
-                            modal.querySelector('#paymentOptions').style.display = 'block';
-                        }, 220000);
-                    }
-                };
-            });
-        });
-
-        // Close modal when clicking outside the modal content
-        modal.addEventListener('click', function(e) {
-            if (e.target === modal) {
+            // Modal event listeners
+            const closeModal = modal.querySelector('#closePaymentModal');
+            closeModal.onclick = function() {
                 modal.style.display = 'none';
                 modal.querySelector('#paymentResult').style.display = 'none';
                 modal.querySelector('#cardForm').style.display = 'none';
                 modal.querySelector('#bankForm').style.display = 'none';
                 modal.querySelector('#paymentOptions').style.display = 'block';
-            }
+            };
+
+            // Buy Now button logic
+            document.querySelectorAll('.buy-now-btn').forEach(function(btn) {
+                btn.addEventListener('click', function() {
+                    const card = btn.closest('.product-card');
+                    const name = card.querySelector('h3').textContent;
+                    const price = card.querySelector('.price').textContent;
+
+                    // Set modal product info
+                    modal.querySelector('#modalProductName').textContent = name;
+                    modal.querySelector('#modalProductPrice').textContent = price;
+                    modal.querySelector('#paymentResult').style.display = 'none';
+                    modal.querySelector('#cardForm').style.display = 'none';
+                    modal.querySelector('#bankForm').style.display = 'none';
+                    modal.querySelector('#paymentOptions').style.display = 'block';
+                    modal.style.display = 'flex';
+
+                    // Card Payment
+                    modal.querySelector('#cardPayBtn').onclick = function() {
+                        modal.querySelector('#paymentOptions').style.display = 'none';
+                        modal.querySelector('#cardForm').style.display = 'flex';
+                        modal.querySelector('#bankForm').style.display = 'none';
+                    };
+
+                    // Bank Transfer
+                    modal.querySelector('#transferPayBtn').onclick = function() {
+                        modal.querySelector('#paymentOptions').style.display = 'none';
+                        modal.querySelector('#cardForm').style.display = 'none';
+                        modal.querySelector('#bankForm').style.display = 'flex';
+                        modal.querySelector('#bankAmount').textContent = "Amount: " + price;
+                    };
+
+                    // Card Form Submission
+                    const cardForm = modal.querySelector('#cardForm');
+                    cardForm.onsubmit = function(e) {
+                        e.preventDefault();
+                        // Simple validation (for demo)
+                        const cardNumber = cardForm.querySelector('#cardNumber').value.trim();
+                        const expiry = cardForm.querySelector('#expiry').value.trim();
+                        const cvv = cardForm.querySelector('#cvv').value.trim();
+                        if (cardNumber && expiry && cvv) {
+                            modal.querySelector('#paymentResult').textContent = 'Card payment successful! Thank you for your purchase of ' + name + '.';
+                            modal.querySelector('#paymentResult').style.display = 'block';
+                            setTimeout(() => {
+                                modal.style.display = 'none';
+                                modal.querySelector('#paymentResult').style.display = 'none';
+                                cardForm.reset();
+                                modal.querySelector('#cardForm').style.display = 'none';
+                                modal.querySelector('#paymentOptions').style.display = 'block';
+                            }, 180000);
+                        }
+                    };
+
+                    // Bank Form Submission
+                    const bankForm = modal.querySelector('#bankForm');
+                    bankForm.onsubmit = function(e) {
+                        e.preventDefault();
+                        const senderName = bankForm.querySelector('#senderName').value.trim();
+                        const proof = bankForm.querySelector('#proof').value.trim();
+                        if (senderName && proof) {
+                            modal.querySelector('#paymentResult').textContent = 'Bank transfer submitted! We will verify your payment soon. Thank you, ' + senderName + '.';
+                            modal.querySelector('#paymentResult').style.display = 'block';
+                            setTimeout(() => {
+                                modal.style.display = 'none';
+                                modal.querySelector('#paymentResult').style.display = 'none';
+                                bankForm.reset();
+                                modal.querySelector('#bankForm').style.display = 'none';
+                                modal.querySelector('#paymentOptions').style.display = 'block';
+                            }, 220000);
+                        }
+                    };
+                });
+            });
+
+            // Close modal when clicking outside the modal content
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                    modal.querySelector('#paymentResult').style.display = 'none';
+                    modal.querySelector('#cardForm').style.display = 'none';
+                    modal.querySelector('#bankForm').style.display = 'none';
+                    modal.querySelector('#paymentOptions').style.display = 'block';
+                }
+            });
         });
     });
 </script>
